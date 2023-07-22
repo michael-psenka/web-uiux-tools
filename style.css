@@ -1,0 +1,134 @@
+/* Important lines */
+/* *---------------------------------------------------------*
+
+29: Fast, metallic publication block
+81: Text rollout animation
+
+*---------------------------------------------------------* */
+
+/* Demo website styling */
+
+body {
+    background-color: #333 !important;
+    color: #fff !important;
+    padding: 20%;
+    padding-top: 30px;
+}
+
+.internal-link {
+    color: #88ddff !important;
+}
+
+.title-main {
+    text-align: center;
+}
+
+#research-desc-body {
+    color: #fff !important
+}
+/* **************************************************** */
+/* Fast, metallic publication block */
+/* **************************************************** */
+
+/* This block is the main block controlling the metalling effect */
+.edu-image {
+    height: 100%;
+    flex: 0 0 auto;
+}
+
+.edu-block {
+    margin-bottom: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 10px;
+    /* display: flex; */
+    /* align-items: stretch; */
+    /* glassmorphism */
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.0) 40%), radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 15%, rgba(255, 255, 255, 0.04) 30%);
+    /* background-color: rgba(255, 255, 255, 0.04); */
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-attachment: fixed;
+}
+
+.edu-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    max-height: 80px;
+    max-width: 110px;
+}
+
+.exp-toggle {
+    font-size: 20px;
+    color: #999;
+    display: block;
+    text-align: center;
+}
+
+.exp-toggle:hover {
+    color: #000;
+}
+
+.edu-hidden-content {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+/* **************************************************** */
+/* Text rollout animation */
+/* **************************************************** */
+
+/* makes popping in/out title text smoother */
+#focus-text {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+/* for when we face out at final reveal */
+#research-desc-click {
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+
+
+.passive-glow {
+    animation: passive-glow 2s ease-in-out infinite;
+}
+
+@keyframes passive-glow {
+    0% {
+        filter: brightness(1);
+        font-size: 24px;
+    }
+
+    50% {
+        filter: brightness(1.5);
+        font-size: 28px;
+    }
+
+    100% {
+        filter: brightness(1);
+        font-size: 24px;
+    }
+}
+
+.passive-glow-nogrow {
+    animation: passive-glow-nogrow 2s ease-in-out infinite;
+}
+
+@keyframes passive-glow-nogrow {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.7);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
